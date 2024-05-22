@@ -28,10 +28,6 @@
   padding-top: 30px;
 }
 
-.blue {
-  color: blue;
-}
-
 /* Style for the close button */
 .close-btn {
   position: fixed; /* Use fixed positioning */
