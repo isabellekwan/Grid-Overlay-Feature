@@ -1,21 +1,29 @@
-// JavaScript to toggle overlay visibility
-function toggleOverlay() {
-  var overlay = document.getElementById("overlay");
-  overlay.style.display = overlay.style.display === "block" ? "none" : "block";
-  var gridContainer = document.querySelector(".grid-container");
-  gridContainer.style.display = overlay.style.display;
+// JavaScript to show a specific grid overlay
+function showOverlay(gridId) {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById(gridId).style.display = "block";
 }
 
-// JavaScript to hide the overlay and grid container
+// JavaScript to hide the overlay and all grid containers
 function hideOverlay() {
   document.getElementById("overlay").style.display = "none";
-  document.querySelector(".grid-container").style.display = "none";
+  document.querySelectorAll(".grid-container").forEach(function(grid) {
+    grid.style.display = "none";
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  // Event listener for the button click to show the grid and overlay
-  document.getElementById("showGridBtn").addEventListener("click", toggleOverlay);
+  // Event listeners for the button clicks to show specific grids
+  document.getElementById("sortifyInfo").addEventListener("click", function() {
+    showOverlay("sortifyGrid");
+  });
+  document.getElementById("cueConnectInfo").addEventListener("click", function() {
+    showOverlay("cueConnectGrid");
+  });
+  document.getElementById("timePulseInfo").addEventListener("click", function() {
+    showOverlay("timePulseGrid");
+  });
 
-  // Event listener for the close button to hide the grid and overlay
+  // Event listener for the close button to hide the overlay and grids
   document.getElementById("closeOverlayBtn").addEventListener("click", hideOverlay);
 });

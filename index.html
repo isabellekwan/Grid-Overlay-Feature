@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grid Overlay Test</title>
+  <title>Bootstrap Grid Overlay</title>
   <!-- Include Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Include custom CSS -->
@@ -15,22 +15,55 @@
   <button id="closeOverlayBtn" class="close-btn">&times;</button>
 </div>
 
-<div class="container-fluid grid-container" style="display: none;">
+<div class="container-fluid grid-container" id="sortifyGrid" style="display: none;">
   <div class="row">
     <div class="col-md-6">
-      <img src="image1.jpg" alt="Image 1" class="img-fluid">
+      <img src="images/sortify1.png" alt="View More Info" class="img-fluid">
+    </div>
+    <div class="col-md-6 right-col">
+      <h5>View More Info</h5>
+      <p>Click on the dropdown icon on the right side of each category heading to see all related links.</p>
     </div>
     <div class="col-md-6">
-      <h5>Title 1</h5>
-      <p>Description for Image 1</p>
+      <img src="images/sortify2.png" alt="Bookmarked Links" class="img-fluid">
+    </div>
+    <div class="col-md-6 right-col">
+      <h5>Bookmarked Links</h5>
+      <p>Bookmarked links will be indicated with a filled in star.</p>
     </div>
     <div class="col-md-6">
-      <img src="image2.jpg" alt="Image 2" class="img-fluid">
+      <img src="images/sortify3.png" alt="Change Link Category" class="img-fluid">
+    </div>
+    <div class="col-md-6 right-col">
+      <h5>Change Category of Link</h5>
+      <p>Links can be recategorized by clicking the category label buttons located at the bottom of each link.
+        Ensure you <strong>refresh your page</strong> to see the changes.
+      </p>
     </div>
     <div class="col-md-6">
-      <h5>Title 2</h5>
-      <p>Description for Image 2</p>
+      <img src="images/sortify4.png" alt="Helpful Buttons" class="img-fluid">
     </div>
+    <div class="col-md-6 right-col">
+      <h5>Helpful Links</h5>
+      <p>"Helpful" and "unhelpful" buttons are available to indicate the usefulness of visited websites. 
+        Selected options will appear in <span class="blue">blue</span>.</p>
+      </p>
+    </div>
+    <div class="col-md-6">
+      <img src="images/sortify5.png" alt="Additional Info" class="img-fluid">
+    </div>
+    <div class="col-md-6 right-col">
+      <h5>Additional Information</h5>
+      <p>The number of links under each category and the amount of time spent at all the links can be found at the top right corner.
+        As well, the tag attached to each link can be found next to the "helpful" button.
+      </p>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid grid-container" id="cueConnectGrid" style="display: none;">
+  <div class="row">
     <div class="col-md-6">
       <img src="image3.jpg" alt="Image 3" class="img-fluid">
     </div>
@@ -45,6 +78,12 @@
       <h5>Title 4</h5>
       <p>Description for Image 4</p>
     </div>
+    <!-- Add more rows as needed -->
+  </div>
+</div>
+
+<div class="container-fluid grid-container" id="timePulseGrid" style="display: none;">
+  <div class="row">
     <div class="col-md-6">
       <img src="image5.jpg" alt="Image 5" class="img-fluid">
     </div>
@@ -52,6 +91,14 @@
       <h5>Title 5</h5>
       <p>Description for Image 5</p>
     </div>
+    <div class="col-md-6">
+      <img src="image6.jpg" alt="Image 6" class="img-fluid">
+    </div>
+    <div class="col-md-6">
+      <h5>Title 6</h5>
+      <p>Description for Image 6</p>
+    </div>
+    <!-- Add more rows as needed -->
   </div>
 </div>
 
@@ -62,8 +109,10 @@
 <!-- Include custom JavaScript -->
 <script src="script.js"></script>
 
-<!-- Button to toggle the overlay -->
-<button id="showGridBtn" class="btn btn-primary mt-3">Show Grid</button>
+<!-- Buttons to toggle the overlay -->
+<button id="sortifyInfo" class="btn btn-primary mt-3">Sortify Info</button>
+<button id="cueConnectInfo" class="btn btn-primary mt-3">Cue Connect Info</button>
+<button id="timePulseInfo" class="btn btn-primary mt-3">Time Pulse Info</button>
 
 </body>
 </html>
